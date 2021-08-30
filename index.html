@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../styles/style.css">
+
+</head>
+<body>
+
+        
+    <!--HEADER -->
+    
+    <div class=" mb-5 pt-4 mx-auto header row  o-v">
+        
+        <div class="col-12 px-3">
+            <div class="d-flex flex-row flex-wrap justify-content-center mx-auto col-lg-10 col-11">
+                <div class="col-lg-4 col-6 d-flex justify-content-start m-0 p-0">
+                    <a class="nav-link px-0" href="#">RVM</a>
+                </div>
+                
+                <div class="col-8 m-0  d-none d-lg-flex justify-content-end align-items-center">
+                    <a class="nav-link me-5" href="#about-sec">about me</a>
+                    <a class="nav-link me-5" href="#project-sec">my works</a>
+                    <a class="nav-link" href="#contact-sec">contact</a>
+                </div>
+                
+                <div class="col-6 m-0 p-0  d-flex d-lg-none justify-content-end align-items-center openbtn">
+                    <button type="button" class="btn p-0">  <img src="../images/menu-01.svg"  class=" menu" onclick="openNav()"/>   </button>
+                </div>
+
+                <div  id="mySidebar" class="sidebar h-100">
+                    <button href="javascript:void(0)" class="btn closebtn" onclick="closeNav()">×</button>
+                    <a href="#about-sec">about</a>
+                    <a href="#project-sec">my works</a>
+                    <a href="#contact-sec">contact</a>
+
+                </div>
+            </div> 
+        </div>
+        <div class=" col-12 row mx-auto my-auto mt-0 mb-5 c0">
+           
+            <div class="col-lg-5 col-10 order-lg-2 order-1 d-flex justify-content-lg-start justify-content-center mx-auto p-0 m-0 c0 pic ">
+                <img src="../images/m(7).svg" alt='header_pic' class="col-10 c1 "/>
+                <img src="../images/m(3).svg" alt='header_pic' class="col-10 c1 animate__animated animate__rollIn"/>
+                <img src="../images/m(2).svg" alt='header_pic' class="col-10 c1 animate__animated animate__fadeInDown"/>
+                <img src="../images/m(1).svg" alt='header_pic' class="col-10 c1 animate__animated animate__fadeInUpBig"/>
+                <img src="../images/m(1).svg" alt='header_pic' class="col-10 c2"/>
+               
+            </div>
+     
+
+            <div class="col-lg-6 col-11 order-lg-1 order-2 mx-auto my-auto d-flex justify-content-lg-end justify-content-center  animate__animated animate__fadeInDown">
+                <div class="col-lg-10 col-12 p-0 row ">
+                    <h1 class="t1 p-1 " >Hello! I'm</h1>
+                    </br>
+                    <h2 id="section-1" class="t2 mt-0 p-0 animate__animated animate__tada">Rhema Miranda</h2>
+                    
+                     <p class="p-1  mt-3 mb-3 description animate__animated animate__fadeInDown">
+                        I'm a creative graphic artist, web designer and front-end web developer who is always passionate to create designs, learn new ideas, and solve challenging task.
+                     </p>
+                     <div class="col-12 m-0 p-0">
+                        <button type="button" onclick="window.open('/components/resume__.pdf')" class="btn col-xl-4 col-lg-5 col-12 mt-2 hd1-btn">My Resume</button>
+                        <a href="#contact-sec"><button type="button" class="btn col-xl-4 col-lg-5 col-12 mt-2 hd-btn" >Hire Me </button></a>
+                     </div>
+                     
+                </div>
+                    
+            </div> 
+            
+        </div>
+        
+    </div>
+
+    <!--ABOUT
+            <h2 class="col-12 text-center  mx-auto mt-2 ff">SKILLS + TOOLS</h2> 
+            <h3 class=" col-10 mx-auto">02<span class="dot">.</span> Projects</h3>
+        <div class="container  col-lg-12 col-md-10 col-12 d-flex flex-row flex-wrap justify-content-center">
+          
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 px-1 py-1">
+                    <div class="col-12 box d-flex flex-column">
+                        <div class="col-2 me-auto m-2">
+                        
+                            <img src="https://img.icons8.com/material/34/947ee9/spades.png" class="flip-img"/>
+                        </div>
+
+                        <div class="col-12 text-center my-auto">
+                            <img src="https://img.icons8.com/ios/100/f0dbaf/bright-moon.png" class="un-flip-img"/>
+                            <h4 class="col-10 my-auto mx-auto flip-img">I can center a div</h4>              
+                        </div>
+                    
+                        <div class="col-2 ms-auto m-2">
+                            <img src="https://img.icons8.com/material/34/947ee9/spades.png" class="flip-img"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 px-1 py-1">
+                    <div class="col-12 box d-flex flex-column">
+                        <div class="col-2 me-auto m-2">
+                            <img src="https://img.icons8.com/material-rounded/34/947ee9/like--v1.png" class="flip-img"/>
+                        </div>
+
+                        <div class="col-12 text-center my-auto">
+                            <img src="https://img.icons8.com/small/70/f0dbaf/spa-flower.png" class="un-flip-img"/>
+                            <h4 class="col-10 my-auto mx-auto flip-img"> I'm an evening person</h4>                
+                        </div>
+                       
+                        <div class="col-2 ms-auto m-2">
+                            <img src="https://img.icons8.com/material-rounded/34/947ee9/like--v1.png" class="flip-img"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 px-1 py-1">
+                    <div class="col-12 box d-flex flex-column">
+                        <div class="col-2 me-auto m-2">
+                            <img src="https://img.icons8.com/ios-glyphs/34/947ee9/diamonds.png" class="flip-img"/>
+                        </div>
+
+                        <div class="col-12 text-center my-auto">
+                            <img src="https://img.icons8.com/material-rounded/65/f0dbaf/art-therapist.png" class="un-flip-img"/>
+                            <h4 class="col-10 my-auto mx-auto flip-img"> I love pink and violet</h4>             
+                        </div>
+                    
+                        <div class="col-2 ms-auto m-2">
+                            <img src="https://img.icons8.com/ios-glyphs/34/947ee9/diamonds.png" class="flip-img"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-12 px-1 py-1">
+                    <div class="col-12 box d-flex flex-column">
+                        <div class="col-2 me-auto m-2">
+                            <img src="https://img.icons8.com/material/34/947ee9/clubs.png"  class="flip-img"/>
+                        </div>
+
+                        <div class="col-12 text-center my-auto">
+                            <img src="https://img.icons8.com/windows/70/f0dbaf/kawaii-cupcake.png" class="un-flip-img"/>
+                            <h4 class="col-10 my-auto mx-auto flip-img">I'm an INTP</h4>                
+                        </div>
+                    
+                        <div class="col-2 ms-auto m-2">
+                            <img src="https://img.icons8.com/material/34/947ee9/clubs.png"  class="flip-img"/>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    -->
+    
+    <section id="about-sec" class="container-fluid m-0 my-5 mx-auto about justify-content-center  ">
+        
+        <div class="col-11 title mt-5 mb-5 mx-auto animate__animated animate__fadeInDown">
+            <h2 class="col-12 text-center  mx-auto mt-2 mb-3 ff">ABOUT ME </h2>   
+            <h4 class="col-md-6 col-11 mb-4 mx-auto am-des text-center">  4th year IT student at the Technological University of the Philippines - Manila. A Freelance Graphic Artist, Web Designer and an aspiring Front-end Web Developer.
+            </h4>
+            <div class="h-line o-p col-lg-1 col-4 mx-auto mt-3"></div>
+        </div> 
+        <div class="container d-flex flex-row flex-wrap justify-content-around ">
+
+            <div class="col-lg-4 col-md-8 col-12 p-2">
+                <div class=" col-12 py-5  sk-box">
+                    <div class="col-12 d-flex justify-content-center ">
+                        
+                    </div>
+                    <h5 class="col-12 text-center mt-4 des">DESIGN</h5>
+                    <div class="col-10 mt-4 mx-auto d-flex flex-row justify-content-center flex-wrap sk-txt des" > 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Figma</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Adobe Xd</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn"> Adobe Ai</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Adobe Ps</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Adobe Id</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 col-12 p-2">
+
+                <div class="col-12 py-5  sk-box">
+                    <div class="col-12 d-flex justify-content-center ">
+                    
+                    </div>
+                    <h5 class="col-12 text-center mt-4 dev">DEVELOPMENT</h5>
+                    <div class="col-10 mt-4 mx-auto d-flex flex-row justify-content-center flex-wrap sk-txt dev" > 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">HTML</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Sass</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Bootstrap</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Javascript</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">React Js</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">C</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">C++</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">My SQL</button>
+                    </div>
+                </div>
+               
+            
+            </div>
+            <div class="col-lg-4 col-md-8 col-12 p-2">
+                <div class="col-12 py-5  sk-box">
+                    <div class="col-12 d-flex justify-content-center ">
+                    </div>
+                    <h5 class="col-12 text-center mt-4 plan">PLANNING</h5>
+                    <div class="col-10 mt-4 mx-auto d-flex flex-row justify-content-center flex-wrap sk-txt plan" >
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Agile</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Scrum</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">MS Office Suite</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Google Docs</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Trello</button>
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 sk-btn">Git</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--PROJECTS -->
+    
+    <section id="project-sec" class="container-fluid m-0 mb-5 mx-auto c0 py-5 px-0 projects">
+        
+        <h2 class="col-11 text-center mx-auto mt-5 ff">MY WORKS</h2>
+        <h4 class="col-md-6 col-11 mb-4 mx-auto am-des text-center">
+        </h4>
+        <div class="h-line o-p col-lg-1 col-4 mx-auto my-3 "></div>
+        <div class="container p-0 mt-5 mb-2">
+            <button type="button" class="btn col-lg-3 col-md-4 col-6 tl-box ">PROJECTS</button>
+        </div>
+        <div class="container p-0 mx-0 row animate__animated animate__fadeInDown mx-auto">
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16170802/media/70e11dd78f5b86661a71881876f6c099.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
+                    <h4 class="">E-BOOKASYON</h4>
+                    <p>
+                       An e-commerce website that caters educational books. Project is up in github.
+                    </p>
+                    <a href="https://github.com/nakataken/iBOOK-Website.git"> 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 s-more " >See More</button>
+                    </a>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/14925759/media/2ca2beea29b63a4552de3bcc7ee4287f.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
+                    <h4 class="">SOCIAL MEDIA AD</h4>
+                    
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16291010/media/a873f922c2bd162d86f3c852697144fe.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+                    <h4 class="">Solange Arakaki</h4>
+                    <p>
+                       A minimalistic header for a youtube channel
+                    </p>
+                    <a href="https://www.youtube.com/channel/UC67hKJF6Y1ywxClfSiaVgrw"> 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 s-more" >See More</button>
+                    </a>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16291017/media/b5a5380d67125c1d7634c4bfa4fcd8de.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+                    <h4 class="">BEN KITCHEN MASTER</h4>
+                    <p>
+                        Business logo and Menu Board for the online food business of Ben Kithen Master
+                    </p>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+           
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16291015/media/f55c417dfaecd41d9ba169a43bca14c9.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+                    <h4 class="">SOCIAL MEDIA AD</h4>
+                    <p>
+                        Social media ad for a local food business
+                    </p>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/14925856/media/e22c1c208c137d97398ecd109be8505c.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
+                    <h4 class="">Yum Delights</h4>
+                    <p>
+                       Packaging design for Yum Delight's Dulce De Leche 
+                    </p>
+                    <a href="https://dribbble.com/RhemaMiranda/collections/5098549-Yum-Delights"> 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 s-more" >See More</button>
+                    </a>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+
+        </div>
+        
+        <div class="container p-0 mt-5 mb-2">
+            <button type="button" class="btn col-lg-3 col-md-4 col-6  tl-box ">CASE STUDY</button>
+        </div>
+        <div class="container p-0 mx-0 row animate__animated animate__fadeInDown mx-auto">
+            
+            <div class="col-lg-6 col-12 prod p-0 c0 ">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16184546/media/9e3237235878e09545ad377b20d26bda.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+                    <h4 class="">LANDING PAGE 1.0</h4>
+                    <p>
+                       The initial layout of this portfolio
+                    </p>
+                    <a href="https://www.behance.net/gallery/125820285/Website-UI"> 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 s-more" >See More</button>
+                    </a>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16286866/media/dac82e8b262048a366f7c8fc25c5bbb1.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
+                    <h4 class="">Case Study 1.0 </h4>
+                    <p>
+                       Packaging and mock up design for a cosmetic product
+                    </p>
+                    <a href="https://dribbble.com/RhemaMiranda/collections/5098559-Case-Study-1-0"> 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 s-more" >See More</button>
+                    </a>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+           
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/16286875/media/d13cf36bdda32ca4bc1b7c7ddfe5394b.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+                    <h4 class="">Case Study 2.0</h4>
+                    <p>
+                        Packaging and mock up design
+                    </p>
+                    <a href="https://dribbble.com/RhemaMiranda/collections/5098563-Case-Study-2-0"> 
+                        <button type="button" class="btn my-1 mx-1 py-2 px-3 s-more" >See More</button>
+                    </a>
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/14925801/media/9d39f5527e1594bb25d0683666eec8eb.jpg?compress=1&resize=800x600" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+           
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/12695217/media/e05415c96857ef5f8fc93e9d1085d0fa.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
+                    
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+            <div class="col-lg-6 col-12 prod p-0 c0">
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/12695192/media/a729672f8236edd047ac239869f36d4b.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
+                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
+                    
+                </div>
+                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
+            </div>
+
+        </div>
+    </section>
+
+    <!--CONTACT -->
+    
+    <section id="contact-sec" class="container-fluid m-0 px-0 mx-auto c0 pb-5 contact o-v">
+        
+        <div class="col-12 d-flex justify-content-end c1">
+            <img src="./images/pc.svg" class="col-lg-2 col-6"/>
+        </div>
+        <div class="col-12 d-flex justify-content-start m-0 p-0 c1 h-100">
+            <img src="./images/vc-01.svg" class="col-lg-3 col-8 mt-auto"/>
+        </div>
+        
+        
+        <div class="col-12 py-5 d-flex flex-wrap c0">
+            <h2 class="col-lg-11 col-12 px-5 mt-lg-5 ">GET IN TOUCH</h2>
+            <h4 class="col-lg-11 col-12 1 px-5 mt-2 c-des text-left"> Need some help? Feel free send me a message.
+            </h4>
+            <div class="col-lg-11 col-12 px-5">
+                <div class="h-line o-w ms-auto col-lg-1 col-4  mt-3"></div>
+            </div> 
+
+            <div class="col-lg-11 col-12 px-5 form-group ">
+                <div class="col-lg-4 col-12 mt-5 ms-auto ">
+                    <input type="email" class="form-control" placeholder="Email" id="email">
+                    <input class="form-control mt-2" placeholder="Subject" id="subject">
+                    <textarea class="form-control mt-2" id="" rows="4" placeholder="Message..." id="message"></textarea>
+                </div>
+                <div class="col-lg-4 col-10 ms-auto  mt-3 d-flex justify-content-end">
+                    <button type="button" class="btn col-6 sd-btn" onclick="sendmessage()">Send</button>
+                </div>
+            </div>
+
+            <div class="px-5 mt-5 mx-auto d-lg-none d-block">
+                <a class="btn" href="https://www.linkedin.com/in/rhemamiranda/">
+                    <img src="https://img.icons8.com/ios-glyphs/25/ffffff/linkedin-2--v1.png"/>
+                </a>
+                <a class="btn" onclick="gmailfunc()">
+                    <img src="https://img.icons8.com/ios-filled/25/ffffff/gmail-new.png"/>                
+                </a>
+                <a class="btn" href="https://dribbble.com/RhemaMiranda">
+                    <img src="https://img.icons8.com/fluency-systems-filled/25/ffffff/dribbble.png"/>
+                </a>
+                <a class="btn">
+                    <img src="https://img.icons8.com/ios-glyphs/25/ffffff/github.png"/>        
+                </a>
+        
+            </div>
+
+            
+        </div>
+        
+        
+        <h4 class="px-5 c0 mx-auto arr">Rhema Miranda. All rights reserved. 2021
+        </h4>
+       
+        
+    </section>
+
+
+    <!-- FOOTER TAG -->
+    <div class="fixed-bottom row col-lg-1 col-1 d-none d-lg-block float " >
+        <a class="btn p-0 col-12 ic-0" href="https://www.linkedin.com/in/rhemamiranda/">
+            <img src="https://img.icons8.com/ios-glyphs/20/3e1f92/linkedin-2--v1.png" 
+            onmouseover="this.src='https://img.icons8.com/ios-glyphs/20/fa949d/linkedin-2--v1.png'" 
+            onmouseout="this.src='https://img.icons8.com/ios-glyphs/20/3e1f92/linkedin-2--v1.png'" 
+            class="p-2 ic-1"/>
+        </a>
+        <a class="btn p-0 col-12 ic-0" onclick="gmailfunc()">
+            <img src="https://img.icons8.com/ios-filled/20/3e1f92/gmail-new.png"  
+            onmouseover="this.src='https://img.icons8.com/ios-filled/20/fa949d/gmail-new.png'" 
+            onmouseout="this.src='https://img.icons8.com/ios-filled/20/3e1f92/gmail-new.png'" 
+            class="p-2 ic-1"/>                
+        </a>
+        <a class="btn p-0 col-12 ic-0" href="https://dribbble.com/RhemaMiranda">
+            <img src="https://img.icons8.com/fluency-systems-filled/22/3e1f92/dribbble.png"  
+            onmouseover="this.src='https://img.icons8.com/fluency-systems-filled/22/fa949d/dribbble.png'" 
+            onmouseout="this.src='https://img.icons8.com/fluency-systems-filled/22/3e1f92/dribbble.png'" 
+            class="p-2 ic-1"/>
+        </a>
+        <a class="btn p-0 mb-1 col-12 ic-0" href="https://github.com/rhemamiranda">
+            <img src="https://img.icons8.com/ios-glyphs/22/3e1f92/github.png"  
+            onmouseover="this.src='https://img.icons8.com/ios-glyphs/22/fa949d/github.png'" 
+            onmouseout="this.src='https://img.icons8.com/ios-glyphs/22/3e1f92/github.png'" 
+            class="p-2 ic-1"/>        
+        </a>
+
+        <div class="mx-auto ">
+            <div class="pink-line mx-auto">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+    <script>
+        
+        $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 800) {
+            $('.bottomMenu').fadeInDown();
+        } else {
+            $('.bottomMenu').fadeOut();
+        }
+        });
+
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+
+    function gmailfunc(){
+        navigator.clipboard.writeText("rhema.miranda@tup.edu.ph");
+        alert("gmail copied");
+    }
+
+    function sendmessage(){
+        Email.send({
+        Host: "smtp.gmail.com",
+        Username: "sender@email_address.comselene.by.rnj",
+        Password: "rhemajamie2727",
+        To: 'selene.by.rnj@gmail.com',
+        From: "miranda.rvillarin2799@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+            alert("mail sent successfully")
+        });
+    }
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+     
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+    window.addEventListener('mouseup',function(event){
+            var mySidebar = document.getElementById("mySidebar");
+            if(event.target != mySidebar && event.target.parentNode != mySidebar){
+                document.getElementById("mySidebar").style.width = "0";
+            }
+    });  
+    </script>
+       
+</body>
+</html>
