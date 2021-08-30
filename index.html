@@ -397,17 +397,17 @@
             <div class="col-lg-11 col-12 px-5">
                 <div class="h-line o-w ms-auto col-lg-1 col-4  mt-3"></div>
             </div> 
-
-            <div class="col-lg-11 col-12 px-5 form-group ">
-                <div class="col-lg-4 col-12 mt-5 ms-auto ">
-                    <input type="email" class="form-control" placeholder="Email" id="email">
-                    <input class="form-control mt-2" placeholder="Subject" id="subject">
-                    <textarea class="form-control mt-2" id="" rows="4" placeholder="Message..." id="message"></textarea>
+            
+            <form class="col-lg-11 col-12 px-5 form-group" action="https://formspree.io/f/xrgrregp" method="POST" d="my-form">
+                <div class="col-lg-4 col-12 mt-5 ms-auto " >
+                    <input type="email" class="form-control" placeholder="email" name="_replyto">
+                    <textarea class="form-control mt-2" rows="4" placeholder="Message..." name="message"></textarea>
                 </div>
                 <div class="col-lg-4 col-10 ms-auto  mt-3 d-flex justify-content-end">
-                    <button type="button" class="btn col-6 sd-btn" onclick="sendmessage()">Send</button>
+                    <button class="btn col-6 sd-btn" type="submit">Send</button>
                 </div>
-            </div>
+                <p id="my-form-status"></p>
+            </form>
 
             <div class="px-5 mt-5 mx-auto d-lg-none d-block">
                 <a class="btn" href="https://www.linkedin.com/in/rhemamiranda/">
@@ -499,20 +499,6 @@
         alert("gmail copied");
     }
 
-    function sendmessage(){
-        Email.send({
-        Host: "smtp.gmail.com",
-        Username: "sender@email_address.comselene.by.rnj",
-        Password: "rhemajamie2727",
-        To: 'selene.by.rnj@gmail.com',
-        From: "miranda.rvillarin2799@gmail.com",
-        Subject: "Sending Email using javascript",
-        Body: "Well that was easy!!",
-      })
-        .then(function (message) {
-            alert("mail sent successfully")
-        });
-    }
 
     function openNav() {
       document.getElementById("mySidebar").style.width = "250px";
