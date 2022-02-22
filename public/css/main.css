@@ -161,6 +161,7 @@ span {
   color: #02022b;
   font-size: clamp(16px, 2vw, 18px);
   font-weight: bolder;
+  line-height: 1;
 }
 
 .sk-box {
