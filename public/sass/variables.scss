@@ -1,0 +1,60 @@
+@import "../node_modules/animate.css/animate.css";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+$color-primary: #3E1F92;
+$color-secondary: #FA949D;
+$color-black: #000000;
+$color-white: #ffffff;
+
+
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Hammersmith One', sans-serif;
+$font-regula: 'Montserrat', sans-serif;
+
+$screen-size:(
+    "sc-s": 480px,
+    "sc-m": 767px,
+    "sc-l": 1390px,
+);
+
+$font-weight:(
+    "thin":400,
+    "normal":500,
+    "bold": 600,
+    "heavy ": 800,
+);
+
+$font-size:(
+        "title":3rem,
+        "h1":2rem,
+        "h2":1.5rem,
+        "h3":1.2rem,
+        "p":1rem, //16px
+        "lbl":1.2rem,
+        "btn":1.2rem, //19px
+);
+
+@mixin btn-primary ($weight-name,$fontsize-name, $color-name){
+    color: $color-plain;
+    background-color:  $color-primary;
+    font-family: 'Hammersmith One', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: weight($weight-name);
+    font-size: fontsize($fontsize-name);
+    border-radius: 20px;
+    box-shadow: none !important;
+}
+
+@mixin btn-secondary ($weight-name,$fontsize-name, $color-name){
+    color:  $color-secondary;
+    background-color: $color-secondary;
+    font-family: 'Hammersmith One', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: weight($weight-name);
+    font-size: fontsize($fontsize-name);
+    border-radius: 20px;
+    box-shadow: none !important;
+}
+
