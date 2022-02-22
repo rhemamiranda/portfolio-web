@@ -33,15 +33,15 @@ body{
 .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: clamp(28px, 2vw, 53px);
-    color: #3e1f92;
     display: block;
     transition: 0.3s;
+
+    @include text-format($color-primary, normal, lbl, $font-secondary);
+    font-size: clamp(28px, 2vw, 53px) !important;
 }
 
 .sidebar a:hover, .sidebar a:focus{
-    background-color: #fa949d;
+    background-color: $color-secondary;
 }
 
 .sidebar .closebtn {
@@ -59,13 +59,11 @@ body{
 }
     
 .nav-link{
-    color: white    !important;
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 22px;
+    @include text-format($color-white, thin, h3, $font-secondary);
     letter-spacing: 1px;
-    font-weight: 400;
     text-align: right;
 }
+
 .nav-link:hover{
     color:$color-secondary !important;
 }
@@ -80,48 +78,40 @@ span{
 }
 
 .t1{
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: clamp(28px, 10vw, 53px);
-    font-weight: 100;
-    color:white;
+    @include text-format($color-white, thin, h3, $font-secondary);
+    font-size: clamp(28px, 10vw, 53px) !important;
     letter-spacing: 0.2px;
 }
 
 .t2{
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: clamp(45px, 10vw, 72px);
+    @include text-format($color-white, thin, h3, $font-secondary);
+    font-size: clamp(45px, 10vw, 72px) !important;
     line-height: 0.8;
-    color: white ;
     letter-spacing: -1px;
     margin-top: -5px!important;
-    
 }
 
 
 .description{
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, 2vw, 18px);
+    @include text-format($color-white, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 18px) !important;
     font-weight: 600;
-    color: white;
     letter-spacing: 1px;
     line-height: 1.4;
 }
 
 .hd1-btn{
-    background: white;
-    color: #3e1f92;
-    font-weight: 500;
-    font-size: clamp(16px, 2vw, 18px);
+    background: $color-white;
+    @include text-format($color-primary, normal, h3, $font-secondary);
+    font-size: clamp(16px, 2vw, 18px) !important;
     letter-spacing: 1px;
     border-radius: 10px;
-
 }
 
 .hd-btn{
-    background-color:#fa949d    ;
-    color: #3e1f92;
-    font-size: clamp(16px, 2vw, 18px);
-    font-weight: 500 !important;
+    background-color: $color-secondary;
+    @include text-format($color-primary, normal, h3, $font-secondary);
+    font-size: clamp(16px, 2vw, 18px) !important;
     letter-spacing: 1px;
     border-radius: 10px;
 }
@@ -142,11 +132,8 @@ span{
 }
 
 .am-des{
-    font-family: 'Montserrat', sans-serif;
-    color: #02022b;
-    font-size: clamp(16px, 2vw, 18px);
-    font-weight: bolder;
-  
+    @include text-format($color-black, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 18px) !important;  
 }
 
 .h-line{
@@ -155,31 +142,25 @@ span{
 }
 
 .about p{
-    font-family: 'Montserrat', sans-serif;
-    color: #02022b;
-    font-size: clamp(16px, 2vw, 18px);
-    font-weight: bolder;
+    @include text-format($color-black, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 18px) !important;
     line-height: 1;
 }
 
 .sk-box{
-    background-color: #3e1f92;
+    background-color: $color-primary;
     box-shadow: 1px 1px 5px 2px rgba(74,73,73,0.15);
     border-radius: 5px;
     min-height: 100% !important;
 }
 
 .sk-box h5{
-    font-family: 'Hammersmith One', sans-serif;
-    color: white;
-    font-size: 32px;
+    @include text-format($color-white, normal, h1, $font-secondary);
     line-height: 0.8;
 }
 
 .sk-txt li{ 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px !important;
-    font-weight: bold;    
+    @include text-format($color-white, bold, p, $font-regular);
     border-radius: 25px;
     box-shadow: none;
     cursor: default !important;
@@ -188,20 +169,20 @@ span{
 
 
 .sk-txt li{
-    background-color: white;
-    color: #3e1f92 !important;
+    background-color: $color-white;
+    color: $color-primary !important;
     text-align: center !important;
 }
 
 
 .dev button{
-    background-color: white;
-    color: #3e1f92 !important;
+    background-color: $color-white;
+    color: $color-primary !important;
 }
 
 .plan button{
-    background-color: white;
-    color: #3e1f92 !important;
+    background-color: $color-white;
+    color: $color-primary !important;
 }
 
 
@@ -214,14 +195,10 @@ span{
 }
 
 .tl-box{
-    background-color: #3e1f92;
+    background-color: $color-primary;
     border-radius: 0 35px 0 0;
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 22px !important;
-    font-weight: 200; 
+    @include text-format($color-secondary, normal, h3, $font-secondary);
     letter-spacing: 1px;
-    color:#FA949D;
-    
 }
 .prod{
     overflow: hidden !important;
@@ -235,28 +212,22 @@ span{
 }
 
 .overlay h4{
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: clamp(22px, 2vw, 32px);
-    color: #3e1f92;
+    @include text-format($color-primary, normal, h3, $font-secondary);
+    font-size: clamp(22px, 2vw, 32px) !important;
 }
 
 
 .overlay p{
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, 2vw, 16px);
-    font-weight: 600;
-    color: #3e1f92;
+    @include text-format($color-primary, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 16px) !important;
 }
 
 .s-more{
-    background-color: #3e1f92;
-    color: white !important;
+    background-color: $color-primary;
+    color: $color-white !important;
     font-weight: 500;
 }
 
-.s-more:active{
-    color: #ddecef !important;
-}
 
 .prod:hover > .overlay, .prod:focus > .overlay{
     animation: slideInDown;
@@ -273,10 +244,8 @@ span{
 ***********************/
 
 .ff{
-    font-family: 'Hammersmith One', sans-serif;
-    color: #3e1f92;
-    font-size: clamp(35px, 2vw, 45px);
-    font-weight: bold;
+    @include text-format($color-primary, bold, h3, $font-secondary);
+    font-size: clamp(35px, 2vw, 45px) !important;
 }
 
 
@@ -288,41 +257,33 @@ span{
 }
 
 .contact h2{
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: clamp(35px, 2vw, 45px);
-    color:white;
+    @include text-format($color-white, normal, h1, $font-secondary);
     text-align: right;
-    font-weight: 500;
 }
 
 .c-des{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: clamp(16px, 2vw, 18px);
-    font-weight: bold;
+    @include text-format($color-white, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 18px) !important;
     line-height: 1;
     text-align: right;
 }
 
 .contact .form-control{
-    border: white !important;
+    border: $color-white !important;
     font-size: clamp(16px, 2vw, 18px);
 }
 
 .sd-btn{
-    background-color:#fa949d    ;
-    color: white;
-    font-size: clamp(16px, 2vw, 18px);
-    font-weight: 500 !important;
+    @include text-format($color-white, bold, h3, $font-regular);
+    background-color:$color-secondary;
+    font-size: clamp(16px, 2vw, 18px) !important;
     letter-spacing: 1px;
     border-radius: 5px;
 }
 
 .arr{
-    font-family: 'Montserrat', sans-serif;
-    color: white !important;
-    font-size: clamp(12px, 2vw, 16px);
-    font-weight: bold;
+    @include text-format($color-white, bold, h3, $font-regular);
+    font-size: clamp(12px, 2vw, 16px) !important;
     line-height: 1;
     text-align: center;
 }
@@ -353,23 +314,23 @@ span{
 }
 
 .ic-1:hover{
-    background-color:  #3e1f92;
+    background-color:  $color-primary;
     border-radius: 18px;
 }
 
 .pink-line{
     height:7vh;
     width: 7px;
-    background-color: #3e1f92;
+    background-color: $color-primary;
     border-radius: 18px 18px 0 0;
 }
 
 .o-v{
-    background-color: #3e1f92;
+    background-color: $color-primary;
 }
 
 .o-p{
-    background-color: #fa949d;
+    background-color: $color-secondary;
 }
 
 .hideme{
