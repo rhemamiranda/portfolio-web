@@ -1,69 +1,185 @@
-@import "../node_modules/animate.css/animate.css";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-._1 {
-  background-color: green;
+#about-sec {
+  overflow: hidden !important;
+  background-color: #ffffff !important;
 }
 
-._2 {
-  background-color: red;
+.am-des {
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  color: #02022b;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-size: clamp(16px, 2vw, 18px) !important;
 }
 
-body {
-  background-color: #3E1F92 !important;
+.h-line {
+  height: 7px;
+  border-radius: 25px;
 }
 
-.btn:focus {
-  box-shadow: none !important;
+.about p {
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  color: #02022b;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-size: clamp(16px, 2vw, 18px) !important;
+  line-height: 1;
 }
 
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+.sk-box {
+  background-color: #3E1F92;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(74, 73, 73, 0.15);
+          box-shadow: 1px 1px 5px 2px rgba(74, 73, 73, 0.15);
+  border-radius: 5px;
+  min-height: 100% !important;
 }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  display: block;
-  transition: 0.3s;
+.sk-box h5 {
   font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
-  color: #3E1F92;
+  color: #ffffff;
   font-weight: 500;
-  font-size: 1.2rem;
-  font-size: clamp(28px, 2vw, 53px) !important;
+  font-size: 2rem;
+  line-height: 0.8;
 }
 
-.sidebar a:hover, .sidebar a:focus {
+.sk-txt {
+  padding-left: 0 !important;
+}
+
+.sk-txt li {
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default !important;
+  text-align: center !important;
+}
+
+.sk-txt li {
+  background-color: #ffffff;
+  color: #3E1F92 !important;
+  text-align: center !important;
+}
+
+.dev button {
+  background-color: #ffffff;
+  color: #3E1F92 !important;
+}
+
+.plan button {
+  background-color: #ffffff;
+  color: #3E1F92 !important;
+}
+
+.contact {
+  overflow: hidden !important;
+}
+
+.contact h2 {
+  font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.c-des {
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-size: clamp(16px, 2vw, 18px) !important;
+  line-height: 1;
+  text-align: right;
+}
+
+.contact .form-control {
+  border: #ffffff !important;
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+.sd-btn {
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  background-color: #FA949D;
+  font-size: clamp(16px, 2vw, 18px) !important;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.arr {
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-size: clamp(12px, 2vw, 16px) !important;
+  line-height: 1;
+  text-align: center;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  position: absolute;
+}
+
+.c2 {
+  opacity: 0%;
+}
+
+.ic-1:not(:hover) {
+  -webkit-animation: headShake;
+          animation: headShake;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.ic-1:hover {
+  background-color: #3E1F92;
+  border-radius: 18px;
+}
+
+.pink-line {
+  height: 7vh;
+  width: 7px;
+  background-color: #3E1F92;
+  border-radius: 18px 18px 0 0;
+}
+
+.o-v {
+  background-color: #3E1F92;
+}
+
+.o-p {
   background-color: #FA949D;
 }
 
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.hideme {
+  opacity: 0;
 }
 
 #main {
-  transition: margin-left 0.5s;
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
   padding: 16px;
 }
 
@@ -147,82 +263,76 @@ span {
           animation-delay: 1s;
 }
 
-/**********************
-******************ABOUT
-***********************/
-#about-sec {
-  overflow: hidden !important;
-  background-color: #ffffff !important;
-}
-
-.am-des {
-  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
-  color: #02022b;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-size: clamp(16px, 2vw, 18px) !important;
-}
-
-.h-line {
-  height: 7px;
-  border-radius: 25px;
-}
-
-.about p {
-  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
-  color: #02022b;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-size: clamp(16px, 2vw, 18px) !important;
-  line-height: 1;
-}
-
-.sk-box {
-  background-color: #3E1F92;
-  box-shadow: 1px 1px 5px 2px rgba(74, 73, 73, 0.15);
-  border-radius: 5px;
-  min-height: 100% !important;
-}
-
-.sk-box h5 {
-  font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 0.8;
-}
-
-.sk-txt li {
-  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 25px;
-  box-shadow: none;
-  cursor: default !important;
-  text-align: center !important;
-}
-
-.sk-txt li {
-  background-color: #ffffff;
-  color: #3E1F92 !important;
-  text-align: center !important;
-}
-
-.dev button {
-  background-color: #ffffff;
-  color: #3E1F92 !important;
-}
-
-.plan button {
-  background-color: #ffffff;
-  color: #3E1F92 !important;
-}
-
-/**********************
-******************my works 
-***********************/
 #project-sec {
+  min-height: 100vh;
+  background: #FFFFFF;
+}
+
+.sp {
+  background-color: #3E1F92;
+}
+
+.sp .badge {
+  background-color: #FFFFFF;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 14px;
+  font-weight: 500 !important;
+  color: #3E1F92;
+  background-color: #FA949D;
+}
+
+.sp h2 {
+  font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
+  color: #FA949D;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-size: clamp(40px, 2vw, 45px) !important;
+  letter-spacing: 0.11em;
+}
+
+.sp p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+}
+
+.sp .bold {
+  font-weight: 600;
+}
+
+.am-1 {
+  height: 100% !important;
+  background-color: #3E1F92;
+}
+
+.am-1 h2 {
+  font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
+  color: #FA949D;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-size: 2em;
+  letter-spacing: 0.11em;
+}
+
+.am-1 p, .am-1 li {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+}
+
+.am-1 .bold {
+  font-weight: 600;
+}
+
+#work-sec {
   overflow: hidden !important;
   background-color: #ffffff !important;
 }
@@ -282,9 +392,19 @@ span {
   opacity: 1;
 }
 
-/**********************
-******************ff
-***********************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #3E1F92 !important;
+}
+
+.btn:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .ff {
   font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
   color: #3E1F92;
@@ -293,101 +413,42 @@ span {
   font-size: clamp(35px, 2vw, 45px) !important;
 }
 
-/**********************
-******************contact
-***********************/
-.contact {
-  overflow: hidden !important;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.contact h2 {
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-family: "Hammersmith One", sans-serif, Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: #3E1F92;
   font-weight: 500;
-  font-size: 2rem;
-  text-align: right;
+  font-size: 1.2rem;
+  font-size: clamp(28px, 2vw, 53px) !important;
 }
 
-.c-des {
-  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-size: clamp(16px, 2vw, 18px) !important;
-  line-height: 1;
-  text-align: right;
-}
-
-.contact .form-control {
-  border: #ffffff !important;
-  font-size: clamp(16px, 2vw, 18px);
-}
-
-.sd-btn {
-  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1.3rem;
+.sidebar a:hover, .sidebar a:focus {
   background-color: #FA949D;
-  font-size: clamp(16px, 2vw, 18px) !important;
-  letter-spacing: 1px;
-  border-radius: 5px;
 }
 
-.arr {
-  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-size: clamp(12px, 2vw, 16px) !important;
-  line-height: 1;
-  text-align: center;
-}
-
-/**********************
-******************FOOTER
-***********************/
-.c0 {
-  position: relative;
-}
-
-.c1 {
+.sidebar .closebtn {
   position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-
-.c2 {
-  opacity: 0%;
-}
-
-.ic-1:not(:hover) {
-  -webkit-animation: headShake;
-          animation: headShake;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-.ic-1:hover {
-  background-color: #3E1F92;
-  border-radius: 18px;
-}
-
-.pink-line {
-  height: 7vh;
-  width: 7px;
-  background-color: #3E1F92;
-  border-radius: 18px 18px 0 0;
-}
-
-.o-v {
-  background-color: #3E1F92;
-}
-
-.o-p {
-  background-color: #FA949D;
-}
-
-.hideme {
-  opacity: 0;
-}/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */

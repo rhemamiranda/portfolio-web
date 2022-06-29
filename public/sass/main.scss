@@ -1,11 +1,107 @@
-@import './resets';
-@import './variables';
 
-._1{
-    background-color: green;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+$color-primary: #3E1F92;
+$color-secondary: #FA949D;
+$color-black: #02022b;
+$color-white: #ffffff;
+
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Hammersmith One', sans-serif;
+$font-regular: 'Montserrat', sans-serif;
+
+$screen-size:(
+    "sc-s": 480px,
+    "sc-m": 767px,
+    "sc-l": 1390px,
+);
+
+$font-weight:(
+    "thin":400,
+    "normal":500,
+    "bold": 600,
+    "heavy ": 800,
+);
+
+$font-size:(
+        "title":3rem,
+        "h1":2rem,
+        "h2":1.5rem,
+        "h3":1.3rem,
+        "p":0.9rem, //16px
+        "lbl":1.2rem,
+        "btn":1.2rem, //19px
+);
+
+@function weight($weight-name){
+    @return map-get($font-weight, $weight-name);
 }
-._2{
-    background-color: red;
+@function fontsize($fontsize-name){
+    @return map-get($font-size, $fontsize-name);
+}
+
+@function fontstyle($fontstyle-name){
+    @return map-get($font-style, $fontstyle-name);
+}
+
+@mixin btn-primary ($weight-name,$fontsize-name, $color-name){
+    color: $color-plain;
+    background-color:  $color-primary;
+    font-family: 'Hammersmith One', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: weight($weight-name);
+    font-size: fontsize($fontsize-name);
+    border-radius: 20px;
+    box-shadow: none !important;
+}
+
+@mixin btn-secondary ($weight-name,$fontsize-name, $color-name){
+    color:  $color-secondary;
+    background-color: $color-secondary;
+    font-family: 'Hammersmith One', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: weight($weight-name);
+    font-size: fontsize($fontsize-name);
+    border-radius: 20px;
+    box-shadow: none !important;
+}
+
+@mixin text-format($color-name, $weight-name, $fontsize-name, $fontstyle-name){
+    font-family: $fontstyle-name, Arial, Helvetica, sans-serif;
+    color: $color-name;
+    font-weight: weight($weight-name);
+    font-size: fontsize($fontsize-name);
+}
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+@import './resets.scss';
+@import './components/styles.scss';
+
+html{
+    scroll-behavior: smooth;
 }
 body{
     background-color: $color-primary !important;
@@ -15,7 +111,11 @@ body{
     box-shadow: none !important;
 }
 
-//Sticky bottom
+.ff{
+    @include text-format($color-primary, bold, h3, $font-secondary);
+    font-size: clamp(35px, 2vw, 45px) !important;
+}
+
 
 .sidebar {
     height: 100%;
@@ -50,289 +150,4 @@ body{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}
-
- 
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-    
-.nav-link{
-    @include text-format($color-white, thin, h3, $font-secondary);
-    letter-spacing: 1px;
-    text-align: right;
-}
-
-.nav-link:hover{
-    color:$color-secondary !important;
-}
-
-.menu{
-    width: 30px;
-    height: auto;
-}
-
-span{
-    position:relative;
-}
-
-.t1{
-    @include text-format($color-white, thin, h3, $font-secondary);
-    font-size: clamp(28px, 10vw, 53px) !important;
-    letter-spacing: 0.2px;
-}
-
-.t2{
-    @include text-format($color-white, thin, h3, $font-secondary);
-    font-size: clamp(45px, 10vw, 72px) !important;
-    line-height: 0.8;
-    letter-spacing: -1px;
-    margin-top: -5px!important;
-}
-
-
-.description{
-    @include text-format($color-white, bold, h3, $font-regular);
-    font-size: clamp(16px, 2vw, 18px) !important;
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 1.4;
-}
-
-.hd1-btn{
-    background: $color-white;
-    @include text-format($color-primary, normal, h3, $font-secondary);
-    font-size: clamp(16px, 2vw, 18px) !important;
-    letter-spacing: 1px;
-    border-radius: 10px;
-}
-
-.hd-btn{
-    background-color: $color-secondary;
-    @include text-format($color-primary, normal, h3, $font-secondary);
-    font-size: clamp(16px, 2vw, 18px) !important;
-    letter-spacing: 1px;
-    border-radius: 10px;
-}
-
-
-#section-1{
-    animation-delay: 1s;
-}
-
-    
-/**********************
-******************ABOUT
-***********************/
-
-#about-sec{
-    overflow: hidden !important;
-    background-color: $color-white !important;
-}
-
-.am-des{
-    @include text-format($color-black, bold, h3, $font-regular);
-    font-size: clamp(16px, 2vw, 18px) !important;  
-}
-
-.h-line{
-    height: 7px ;
-    border-radius: 25px;
-}
-
-.about p{
-    @include text-format($color-black, bold, h3, $font-regular);
-    font-size: clamp(16px, 2vw, 18px) !important;
-    line-height: 1;
-}
-
-.sk-box{
-    background-color: $color-primary;
-    box-shadow: 1px 1px 5px 2px rgba(74,73,73,0.15);
-    border-radius: 5px;
-    min-height: 100% !important;
-}
-
-.sk-box h5{
-    @include text-format($color-white, normal, h1, $font-secondary);
-    line-height: 0.8;
-}
-
-.sk-txt li{ 
-    @include text-format($color-white, bold, p, $font-regular);
-    border-radius: 25px;
-    box-shadow: none;
-    cursor: default !important;
-    text-align: center !important;
-}
-
-
-.sk-txt li{
-    background-color: $color-white;
-    color: $color-primary !important;
-    text-align: center !important;
-}
-
-
-.dev button{
-    background-color: $color-white;
-    color: $color-primary !important;
-}
-
-.plan button{
-    background-color: $color-white;
-    color: $color-primary !important;
-}
-
-
-/**********************
-******************my works 
-***********************/
-#project-sec{
-    overflow: hidden!important;
-    background-color: $color-white !important;
-}
-
-.tl-box{
-    background-color: $color-primary;
-    border-radius: 0 35px 0 0;
-    @include text-format($color-secondary, normal, h3, $font-secondary);
-    letter-spacing: 1px;
-}
-.prod{
-    overflow: hidden !important;
-}
-
-.overlay{
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    z-index: 1;
-}
-
-.overlay h4{
-    @include text-format($color-primary, normal, h3, $font-secondary);
-    font-size: clamp(22px, 2vw, 32px) !important;
-}
-
-
-.overlay p{
-    @include text-format($color-primary, bold, h3, $font-regular);
-    font-size: clamp(16px, 2vw, 16px) !important;
-}
-
-.s-more{
-    background-color: $color-primary;
-    color: $color-white !important;
-    font-weight: 500;
-}
-
-
-.prod:hover > .overlay, .prod:focus > .overlay{
-    animation: slideInDown;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    opacity: 1;
-
-}
-
-
-/**********************
-******************ff
-***********************/
-
-.ff{
-    @include text-format($color-primary, bold, h3, $font-secondary);
-    font-size: clamp(35px, 2vw, 45px) !important;
-}
-
-
-/**********************
-******************contact
-***********************/
-.contact{
-    overflow: hidden !important;
-}
-
-.contact h2{
-    @include text-format($color-white, normal, h1, $font-secondary);
-    text-align: right;
-}
-
-.c-des{
-    @include text-format($color-white, bold, h3, $font-regular);
-    font-size: clamp(16px, 2vw, 18px) !important;
-    line-height: 1;
-    text-align: right;
-}
-
-.contact .form-control{
-    border: $color-white !important;
-    font-size: clamp(16px, 2vw, 18px);
-}
-
-.sd-btn{
-    @include text-format($color-white, bold, h3, $font-regular);
-    background-color:$color-secondary;
-    font-size: clamp(16px, 2vw, 18px) !important;
-    letter-spacing: 1px;
-    border-radius: 5px;
-}
-
-.arr{
-    @include text-format($color-white, bold, h3, $font-regular);
-    font-size: clamp(12px, 2vw, 16px) !important;
-    line-height: 1;
-    text-align: center;
-}
-
-/**********************
-******************FOOTER
-***********************/
-
-.c0{
-    position: relative;  
-}
-
-.c1{
-    position: absolute;
-} 
-
-
-.c2{
-    opacity: 0%;
-}
-
-
-.ic-1:not(:hover){
-    animation: headShake;
-    animation-duration: 2.5s;
-
-    animation-iteration-count: 1;
-}
-
-.ic-1:hover{
-    background-color:  $color-primary;
-    border-radius: 18px;
-}
-
-.pink-line{
-    height:7vh;
-    width: 7px;
-    background-color: $color-primary;
-    border-radius: 18px 18px 0 0;
-}
-
-.o-v{
-    background-color: $color-primary;
-}
-
-.o-p{
-    background-color: $color-secondary;
-}
-
-.hideme{
-    opacity:0;
 }

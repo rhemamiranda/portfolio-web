@@ -1,0 +1,68 @@
+ 
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+    
+.nav-link{
+    @include text-format($color-white, thin, h3, $font-secondary);
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.nav-link:hover{
+    color:$color-secondary !important;
+}
+
+.menu{
+    width: 30px;
+    height: auto;
+}
+
+span{
+    position:relative;
+}
+
+.t1{
+    @include text-format($color-white, thin, h3, $font-secondary);
+    font-size: clamp(28px, 10vw, 53px) !important;
+    letter-spacing: 0.2px;
+}
+
+.t2{
+    @include text-format($color-white, thin, h3, $font-secondary);
+    font-size: clamp(45px, 10vw, 72px) !important;
+    line-height: 0.8;
+    letter-spacing: -1px;
+    margin-top: -5px!important;
+}
+
+
+.description{
+    @include text-format($color-white, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 18px) !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.hd1-btn{
+    background: $color-white;
+    @include text-format($color-primary, normal, h3, $font-secondary);
+    font-size: clamp(16px, 2vw, 18px) !important;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.hd-btn{
+    background-color: $color-secondary;
+    @include text-format($color-primary, normal, h3, $font-secondary);
+    font-size: clamp(16px, 2vw, 18px) !important;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+
+#section-1{
+    animation-delay: 1s;
+}

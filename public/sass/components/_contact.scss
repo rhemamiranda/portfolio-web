@@ -1,0 +1,35 @@
+.contact{
+    overflow: hidden !important;
+}
+
+.contact h2{
+    @include text-format($color-white, normal, h1, $font-secondary);
+    text-align: right;
+}
+
+.c-des{
+    @include text-format($color-white, bold, h3, $font-regular);
+    font-size: clamp(16px, 2vw, 18px) !important;
+    line-height: 1;
+    text-align: right;
+}
+
+.contact .form-control{
+    border: $color-white !important;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.sd-btn{
+    @include text-format($color-white, bold, h3, $font-regular);
+    background-color:$color-secondary;
+    font-size: clamp(16px, 2vw, 18px) !important;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.arr{
+    @include text-format($color-white, bold, h3, $font-regular);
+    font-size: clamp(12px, 2vw, 16px) !important;
+    line-height: 1;
+    text-align: center;
+}

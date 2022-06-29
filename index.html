@@ -92,7 +92,7 @@
                     </div>
 
                     <p class="p-1  mt-3 mb-3 description animate__animated animate__fadeInDown">
-                    I'm a creative graphic artist, web designer, and front-end web developer based in the Philippines. I am always passionate about creating designs, learning new ideas, and solving challenging tasks.                     </p>
+                        A creative web designer and front-end web developer.  I am always passionate about creating system designs, developing websites, learning new ideas, and solving challenging tasks.                     </p>
                     <div class="col-12 m-0 p-0">
                     <button type="button" onclick="window.open('/RVM_Resume.pdf')" class="btn col-xl-4 col-lg-5 col-12 mt-2 hd1-btn">My Resume</button>
                     <a href="#contact-sec"><button type="button" class="btn col-xl-4 col-lg-5 col-12 mt-2 hd-btn" >Hire Me </button></a>
@@ -111,11 +111,11 @@
         <div class="my-5"></div>
         <div class="hideme col-11 title mt-5 mb-5 mx-auto">
             <h2 class="col-12 text-center  mx-auto mt-2 mb-3 ff">ABOUT ME </h2>   
-            <h4 class="col-md-6 col-11 mb-4 mx-auto am-des text-center">  4th year IT student at the Technological University of the Philippines - Manila. A Freelance Graphic Artist, Web Designer and Front-end Web Developer.
+            <h4 class="col-md-6 col-11 mb-4 mx-auto am-des text-center">  Graduating Information Technology student from the Technological University of the Philippines - Manila. 
             </h4>
             <div class="h-line o-p col-lg-1 col-4 mx-auto mt-3"></div>
         </div> 
-        <div class="container d-flex flex-row flex-wrap justify-content-around ">
+        <div id="app" class="container mb-5 d-flex flex-row flex-wrap justify-content-around ">
 
             <div class="hideme col-lg-4 col-md-8 col-12 p-2">
                 <div class=" col-12 py-5  sk-box">
@@ -124,11 +124,7 @@
                     </div>
                     <h5 class="col-12 text-center mt-4 des">DESIGN</h5>
                     <ul class="col-10 mt-4 mx-auto d-flex flex-row justify-content-center flex-wrap sk-txt des">
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Figma</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Adobe Xd</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn"> Adobe Ai</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Adobe Ps</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Adobe Id</li>
+                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn"  v-for="design_ in design">{{design_}}</li>
                     </ul>
                 </div>
             </div>
@@ -138,18 +134,10 @@
                     <div class="col-12 d-flex justify-content-center ">
                     
                     </div>
-                    <h5 class="col-12 text-center mt-4 dev">DEVELOPMENT</h5>
+                    <h5 class="col-12 text-center mt-4 dev" >DEVELOPMENT</h5>
                     <ul class="col-10 mt-4 mx-auto d-flex flex-row justify-content-center flex-wrap sk-txt dev" > 
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">HTML</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Css</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Sass</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Bootstrap</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Javascript</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">jQuery</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">PHP</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">C</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">C++</li>
-                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">My SQL</li>
+                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn"  v-for="dev_ in dev">{{dev_}}</li>
+                   
                     </ul>
                 </div>
                
@@ -161,14 +149,7 @@
                     </div>
                     <h5 class="col-12 text-center mt-4 plan">PLANNING</h5>
                     <ul class="col-10 mt-4 mx-auto d-flex flex-row justify-content-center flex-wrap sk-txt plan" >
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Agile</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Scrum</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">MS Office Suite</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Google Docs</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Trello</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Slack</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Google Drive</li>
-                            <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn">Git</li>
+                        <li type="li" class="btn my-1 mx-1 py-2 px-3 sk-btn"  v-for="plan_ in plan">{{plan_}}</li>
                     </ul>
                 </div>
             </div>
@@ -177,20 +158,93 @@
 
     </section>
 
+    <div id="project-sec" class="container-fluid mx-auto py-5 px-0">
+        <div class=" mx-auto p-5 col-12 sp">
+            <div class="py-4">
+                <h2 class="hideme">Education</h2>
+                
+                <div class="col-12 mt-4 row row-cols-1 row-cols-lg-3">
+                    <div class=" hideme col">
+                        <span class="badge ">Tertiary</span>
+                        <p class="mt-3 bold">Technological University of the Philippines</p>
+                        <p>
+                            Bachelor of Science in Information Technology
+                            <br> 2018 - August 2022
+                            <br> Award: running for Cum Laude
+                        </p>
+                    </div>
+                    <div class="hideme col">
+                        <span class="badge ">Senior High School</span>
+                        <p class="mt-3 bold">San Pedro College of Business Administration</p>
+                        <p>
+                            Science, Technology, Engineering, and Mathematics
+                            <br> 2016 – 2018
+                            <br> Award: with Honors
+                        </p>
+                    </div>
+                    <div class=" hideme col">
+                        <span class="badge ">Junior High School</span>
+                        <p class="mt-3 bold">St. Peter Academy </p>
+                        <p>
+                            2012 – 2016
+                            <br> Award: Special Awardee (Most Outstanding in Class)
+                        </p>
+                    </div>
+                </div>
 
-    <!--PROJECTS -->
+            </div>
+        </div>
+        <div class="mt-1 mx-auto row row-cols-1 row-cols-lg-3 gy-2">
+            <div class="col gx-0 ">
+                <div class=" p-5 am-1">
+                    <div class="hideme">
+                        <h2 class="">Expertise</h2>
+                        <ul class="mt-4">
+                            <li>Front-end Web Development</li>
+                            <li>UI and UX Design</li>
+                            <li>Graphic Design</li>
+                            <li>Wireframing and Prototyping</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col gx-0 gx-lg-3">
+                <div class="p-5 am-1">
+                    <div class="hideme">
+                        <h2 class="">Internship</h2>
+                        <p class="bold">Baytech BPO Corporation<br> Front-end Web Developer Intern</p>
+                        <p class="">
+                            Weremote, Inc. 2nd Floor, Building C, Metrowalk Commercial Complex, Meralco Avenue, Pasig City
+                            <br>March 2022 – June 2022
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col gx-0 ">
+                <div class=" p-5 am-1">
+                    <div class="hideme">
+                        <h2 class="">Scholarships</h2>
+                        <p><span class="bold">Iskolar ng Lungsod ng San Pedro</span> <br> 2018 - present</p>
+                        <p> <span class="bold">Iskolar ng Laguna</span> <br> 2019 - present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--WORKS -->
     
-    <section id="project-sec" class="container-fluid m-0 mx-auto c0 py-5 px-0 projects">
+    <section id="work-sec" class="container-fluid m-0 mx-auto c0 py-5 px-0">
         
         <h2 class="hideme col-11 text-center mx-auto mt-5 ff">MY WORKS</h2>
         <h4 class="col-md-6 col-11 mb-4 mx-auto am-des text-center">
+
         </h4>
         <div class="hideme h-line o-p col-lg-1 col-4 mx-auto my-3 "></div>
-        <div class="hideme container p-0 mt-5 mb-2">
-            <button type="button" class="btn col-lg-3 col-md-4 col-6 tl-box ">PROJECTS</button>
-        </div>
-        <div class="container p-0 mx-0 row  mx-auto">
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+    
+        <div class="container p-0 my-4 mx-auto row row-cols-1 row-cols-lg-3">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/17570946/media/7448ec6cd756107e59b90b3e054b874b.png?compress=1&resize=1200x900&vertical=top" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     <h4 class="">DAYiary</h4>
@@ -203,7 +257,7 @@
                 </div>
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16773392/media/81138b1035a244bb7d4900ce66d426c5.png?compress=1&resize=1200x900&vertical=top" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     <h4 class="">chick-chi-laok</h4>
@@ -216,7 +270,7 @@
                 </div>
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16170802/media/70e11dd78f5b86661a71881876f6c099.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     <h4 class="">E-BOOKASYON</h4>
@@ -230,7 +284,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
 
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/14925759/media/2ca2beea29b63a4552de3bcc7ee4287f.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     <h4 class="">SOCIAL MEDIA AD</h4>
@@ -239,7 +293,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
 
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16291010/media/a873f922c2bd162d86f3c852697144fe.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">Solange Arakaki</h4>
@@ -253,7 +307,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
 
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16291017/media/b5a5380d67125c1d7634c4bfa4fcd8de.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">BEN KITCHEN MASTER</h4>
@@ -264,7 +318,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
            
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16291015/media/f55c417dfaecd41d9ba169a43bca14c9.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">SOCIAL MEDIA AD</h4>
@@ -275,7 +329,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
 
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/14925856/media/e22c1c208c137d97398ecd109be8505c.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     <h4 class="">Yum Delights</h4>
@@ -288,15 +342,7 @@
                 </div>
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
-
-
-        </div>
-        
-        <div class="hideme container p-0 mt-5 mb-2">
-            <button type="button" class="btn col-lg-3 col-md-4 col-6  tl-box ">CASE STUDY</button>
-        </div>
-        <div class="container p-0 mx-0 row mx-auto">
-            <div class="hideme col-lg-6 col-12 prod p-0 c0 ">
+            <div class="hideme hideme col prod p-0 c0 ">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16393520/media/5affd1455b3d7d02e73f6290d01dc9c4.png?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">Identity</h4>
@@ -310,7 +356,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
             
-            <div class="hideme col-lg-6 col-12 prod p-0 c0 ">
+            <div class="hideme hideme col prod p-0 c0 ">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16360015/media/8a8319dc5a8c41a7098d80c8b5413b51.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">RVM PORTFOLIO</h4>
@@ -324,7 +370,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
             
-            <div class="hideme col-lg-6 col-12 prod p-0 c0 ">
+            <div class="hideme hideme col prod p-0 c0 ">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16184546/media/9e3237235878e09545ad377b20d26bda.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">LANDING PAGE 1.0</h4>
@@ -338,7 +384,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
 
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16286866/media/dac82e8b262048a366f7c8fc25c5bbb1.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     <h4 class="">Case Study 1.0 </h4>
@@ -352,7 +398,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
            
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/16286875/media/d13cf36bdda32ca4bc1b7c7ddfe5394b.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     <h4 class="">Case Study 2.0</h4>
@@ -365,16 +411,8 @@
                 </div>
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
-
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
-                <img src="https://cdn.dribbble.com/users/5650481/screenshots/14925801/media/9d39f5527e1594bb25d0683666eec8eb.jpg?compress=1&resize=800x600" class="col-12 mx-auto c1 "/>
-                <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
-
-                </div>
-                <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
-            </div>
            
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/12695217/media/e05415c96857ef5f8fc93e9d1085d0fa.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-5 c1">
                     
@@ -382,7 +420,7 @@
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/15925221/media/9ef34dd40c702eb27e8a1803be8b5fe0.jpg?compress=1&resize=1600x1200" class="col-12 mx-auto c2"/>
             </div>
 
-            <div class="hideme hideme col-lg-6 col-12 prod p-0 c0">
+            <div class="hideme hideme col prod p-0 c0">
                 <img src="https://cdn.dribbble.com/users/5650481/screenshots/12695192/media/a729672f8236edd047ac239869f36d4b.jpg?compress=1&resize=1200x900" class="col-12 mx-auto c1 "/>
                 <div class="col-12 overlay o-p d-flex flex-column flex-wrap justify-content-center p-md-5 p-4 c1">
                     
@@ -407,8 +445,7 @@
         
         <div class="col-12 py-5 d-flex flex-wrap c0">
             <h2 class="col-lg-11 col-12 px-5 mt-lg-5 ">GET IN TOUCH</h2>
-            <h4 class="col-lg-11 col-12 1 px-5 mt-2 c-des text-left"> Need some help? Feel free send me a message.
-            </h4>
+            <h4 class="col-lg-11 col-12 1 px-5 mt-2 c-des text-left"> Please send me an email. I'd love to hear from you.</h4>
             <div class="col-lg-11 col-12 px-5">
                 <div class="h-line o-w ms-auto col-lg-1 col-4  mt-3"></div>
             </div> 
@@ -444,15 +481,11 @@
         </div>
         
         
-        <h4 class="px-5 c0 mx-auto arr">Rhema Miranda. All rights reserved. 2021
+        <h4 class="px-5 c0 mx-auto arr">Rhema Miranda. All rights reserved. 2022
         </h4>
        
         
     </section>
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -460,6 +493,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        let app = Vue.createApp({
+            data: function() {
+               return{
+                design:[
+                    "Adobe Illustrator",
+                    "Adobe Photoshop,",
+                    "Adobe XD",
+                    "Adobe InDesign",
+                    "Figma",
+                ],
+                dev: [
+                "HTML5",
+                "CSS",
+                "Sass",
+                "Bootstrap",
+                "Javascript",
+                "jQuery",
+                "PHP",
+                "C",
+                "C++",
+                "Java Swing",
+                "MySQL",
+                "Vue Js",
+                "StorybookJs",
+                "Json",
+                "DOM",
+                "Github",
+                "Git",],
+                plan: [
+                "Agile",
+                "Scrum",
+                "Atomic Design",
+                "Trello",
+                "Slack",
+                "MS Office Suite",
+                "G Suite",],
+               }
+               
+            },
+         
+ 
+        })
+        app.mount('#app')
+    </script>
 
 <script>
     $(document).ready(function() {
@@ -476,10 +555,8 @@
 
             if( bottom_of_window > bottom_of_object ){
                 
-                $(this).animate({'opacity':'1'},200);
-                    
+                $(this).animate({'opacity':'1'},500);
             }
-            
         }); 
     
     });
@@ -491,7 +568,6 @@
 
 
 <script>
-
 function gmailfunc(){
     navigator.clipboard.writeText("rhema.miranda@tup.edu.ph");
     alert("gmail copied");

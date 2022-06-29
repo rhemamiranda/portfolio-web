@@ -1,1 +1,9 @@
-{"version":3,"sources":["../sass/resets.scss"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,SAAA;EACA,UAAA;AACJ","file":"resets.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAC,CAAC;CACZ",
+    "sources": [
+        "../sass/resets.scss"
+    ],
+    "names": [],
+    "file": "resets.css"
+}

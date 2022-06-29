@@ -1,0 +1,43 @@
+.c0{
+    position: relative;  
+}
+
+.c1{
+    position: absolute;
+} 
+
+.c2{
+    opacity: 0%;
+}
+
+
+.ic-1:not(:hover){
+    animation: headShake;
+    animation-duration: 2.5s;
+
+    animation-iteration-count: 1;
+}
+
+.ic-1:hover{
+    background-color:  $color-primary;
+    border-radius: 18px;
+}
+
+.pink-line{
+    height:7vh;
+    width: 7px;
+    background-color: $color-primary;
+    border-radius: 18px 18px 0 0;
+}
+
+.o-v{
+    background-color: $color-primary;
+}
+
+.o-p{
+    background-color: $color-secondary;
+}
+
+.hideme{
+    opacity:0;
+}
