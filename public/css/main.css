@@ -264,7 +264,6 @@ span {
 }
 
 #project-sec {
-  min-height: 100vh;
   background: #FFFFFF;
 }
 
@@ -450,5 +449,13 @@ body {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+._1 {
+  background: green;
+}
+
+._2 {
+  background: salmon !important;
 }
 /*# sourceMappingURL=main.css.map */
